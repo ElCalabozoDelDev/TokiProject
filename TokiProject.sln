@@ -1,11 +1,84 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
-VisualStudioVersion = 17.13.35931.197 d17.13
+VisualStudioVersion = 17.13.35931.197
 MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "src", "src", "{02EA681E-C7D8-13C7-8484-4AC65E1B71E8}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Backend", "Backend", "{C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Frontend", "Frontend", "{D75FCAF5-2F35-466D-AC46-F7C34387B3CC}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.WebUI", "src\Frontend\Toki.WebUI\Toki.WebUI\Toki.WebUI.csproj", "{1876ED53-849B-4C18-9BA3-A86525FDF718}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.WebUI.Client", "src\Frontend\Toki.WebUI\Toki.WebUI.Client\Toki.WebUI.Client.csproj", "{535A8912-3693-4EB8-B9F3-74C378D7DABA}"
+	ProjectSection(ProjectDependencies) = postProject
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613} = {13ACF35C-B25E-42C1-90A1-91D19B21B613}
+	EndProjectSection
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokiProject.AppHost", "TokiProject.AppHost\TokiProject.AppHost.csproj", "{D6EB5B06-35B6-409C-966F-BBD53FD66448}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "TokiProject.ServiceDefaults", "TokiProject.ServiceDefaults\TokiProject.ServiceDefaults.csproj", "{A818EB67-BFB0-0D97-F0C9-0144EDB5B53D}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.Api", "src\Backend\Toki.Api\Toki.Api.csproj", "{13ACF35C-B25E-42C1-90A1-91D19B21B613}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.Domain", "src\Backend\Toki.Domain\Toki.Domain.csproj", "{647C323E-25C8-4112-AB02-F9FE4AD8C027}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.Application", "src\Backend\Toki.Application\Toki.Application.csproj", "{3A417383-7E51-4108-BF7D-79EFC93CBEE2}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Toki.Infrastructure", "src\Backend\Toki.Infrastructure\Toki.Infrastructure.csproj", "{EBC79926-2BB3-4074-8362-19CC712EDF96}"
+EndProject
 Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{1876ED53-849B-4C18-9BA3-A86525FDF718}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1876ED53-849B-4C18-9BA3-A86525FDF718}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1876ED53-849B-4C18-9BA3-A86525FDF718}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1876ED53-849B-4C18-9BA3-A86525FDF718}.Release|Any CPU.Build.0 = Release|Any CPU
+		{535A8912-3693-4EB8-B9F3-74C378D7DABA}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{535A8912-3693-4EB8-B9F3-74C378D7DABA}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{535A8912-3693-4EB8-B9F3-74C378D7DABA}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{535A8912-3693-4EB8-B9F3-74C378D7DABA}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D6EB5B06-35B6-409C-966F-BBD53FD66448}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D6EB5B06-35B6-409C-966F-BBD53FD66448}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D6EB5B06-35B6-409C-966F-BBD53FD66448}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D6EB5B06-35B6-409C-966F-BBD53FD66448}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A818EB67-BFB0-0D97-F0C9-0144EDB5B53D}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A818EB67-BFB0-0D97-F0C9-0144EDB5B53D}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A818EB67-BFB0-0D97-F0C9-0144EDB5B53D}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A818EB67-BFB0-0D97-F0C9-0144EDB5B53D}.Release|Any CPU.Build.0 = Release|Any CPU
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613}.Release|Any CPU.Build.0 = Release|Any CPU
+		{647C323E-25C8-4112-AB02-F9FE4AD8C027}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{647C323E-25C8-4112-AB02-F9FE4AD8C027}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{647C323E-25C8-4112-AB02-F9FE4AD8C027}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{647C323E-25C8-4112-AB02-F9FE4AD8C027}.Release|Any CPU.Build.0 = Release|Any CPU
+		{3A417383-7E51-4108-BF7D-79EFC93CBEE2}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{3A417383-7E51-4108-BF7D-79EFC93CBEE2}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{3A417383-7E51-4108-BF7D-79EFC93CBEE2}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{3A417383-7E51-4108-BF7D-79EFC93CBEE2}.Release|Any CPU.Build.0 = Release|Any CPU
+		{EBC79926-2BB3-4074-8362-19CC712EDF96}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{EBC79926-2BB3-4074-8362-19CC712EDF96}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{EBC79926-2BB3-4074-8362-19CC712EDF96}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{EBC79926-2BB3-4074-8362-19CC712EDF96}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{D75FCAF5-2F35-466D-AC46-F7C34387B3CC} = {02EA681E-C7D8-13C7-8484-4AC65E1B71E8}
+		{1876ED53-849B-4C18-9BA3-A86525FDF718} = {D75FCAF5-2F35-466D-AC46-F7C34387B3CC}
+		{535A8912-3693-4EB8-B9F3-74C378D7DABA} = {D75FCAF5-2F35-466D-AC46-F7C34387B3CC}
+		{13ACF35C-B25E-42C1-90A1-91D19B21B613} = {C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C}
+		{647C323E-25C8-4112-AB02-F9FE4AD8C027} = {C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C}
+		{3A417383-7E51-4108-BF7D-79EFC93CBEE2} = {C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C}
+		{EBC79926-2BB3-4074-8362-19CC712EDF96} = {C4BEBB6D-6297-46D6-A120-6AAFEF7A0B2C}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7901C0EA-AF78-4588-AA2E-A0DA067D31DF}
